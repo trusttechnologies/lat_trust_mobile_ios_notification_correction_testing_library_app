@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		7A4F2CC625F69F5D00A683F0 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A4F2CBF25F69F5D00A683F0 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A4F2CCE25F69F8900A683F0 /* DialogsNotificationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F2CCD25F69F8900A683F0 /* DialogsNotificationStruct.swift */; };
 		7A4F2CD225F69F8E00A683F0 /* ParseNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F2CD125F69F8E00A683F0 /* ParseNotification.swift */; };
+		C83062CCB3D512859254FC56 /* Pods_NotiCorrectionLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF34A5167327E3246F4310CE /* Pods_NotiCorrectionLib.framework */; };
 		FEC4706C25E7E0F00001C3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4706B25E7E0F00001C3B2 /* AppDelegate.swift */; };
 		FEC4707025E7E0F00001C3B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4706F25E7E0F00001C3B2 /* ViewController.swift */; };
 		FEC4707325E7E0F00001C3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC4707125E7E0F00001C3B2 /* Main.storyboard */; };
@@ -52,6 +53,10 @@
 		7A4F2CC325F69F5D00A683F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A4F2CCD25F69F8900A683F0 /* DialogsNotificationStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsNotificationStruct.swift; sourceTree = "<group>"; };
 		7A4F2CD125F69F8E00A683F0 /* ParseNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseNotification.swift; sourceTree = "<group>"; };
+		7AB49D3225F7B550001BAB9A /* NotiCorrectionLib.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotiCorrectionLib.entitlements; sourceTree = "<group>"; };
+		8F2281DC497A93C4E80426A4 /* Pods-NotiCorrectionLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotiCorrectionLib.release.xcconfig"; path = "Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib.release.xcconfig"; sourceTree = "<group>"; };
+		B0DE877FBAFBF9009473D205 /* Pods-NotiCorrectionLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotiCorrectionLib.debug.xcconfig"; path = "Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib.debug.xcconfig"; sourceTree = "<group>"; };
+		DF34A5167327E3246F4310CE /* Pods_NotiCorrectionLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotiCorrectionLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC4706825E7E0F00001C3B2 /* NotiCorrectionLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiCorrectionLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC4706B25E7E0F00001C3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEC4706F25E7E0F00001C3B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83062CCB3D512859254FC56 /* Pods_NotiCorrectionLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +104,31 @@
 			path = NotificationServiceExtension;
 			sourceTree = "<group>";
 		};
+		967F4C19DFFBA06455B1332B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF34A5167327E3246F4310CE /* Pods_NotiCorrectionLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97C4C11DC15C9B0F5F2C19B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0DE877FBAFBF9009473D205 /* Pods-NotiCorrectionLib.debug.xcconfig */,
+				8F2281DC497A93C4E80426A4 /* Pods-NotiCorrectionLib.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FEC4705F25E7E0F00001C3B2 = {
 			isa = PBXGroup;
 			children = (
 				FEC4706A25E7E0F00001C3B2 /* NotiCorrectionLib */,
 				7A4F2CC025F69F5D00A683F0 /* NotificationServiceExtension */,
 				FEC4706925E7E0F00001C3B2 /* Products */,
+				97C4C11DC15C9B0F5F2C19B8 /* Pods */,
+				967F4C19DFFBA06455B1332B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +144,7 @@
 		FEC4706A25E7E0F00001C3B2 /* NotiCorrectionLib */ = {
 			isa = PBXGroup;
 			children = (
+				7AB49D3225F7B550001BAB9A /* NotiCorrectionLib.entitlements */,
 				7A4F2CB425F69F1000A683F0 /* GoogleService-Info.plist */,
 				FEC4706B25E7E0F00001C3B2 /* AppDelegate.swift */,
 				FEC4707425E7E0F10001C3B2 /* Assets.xcassets */,
@@ -179,10 +205,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEC4707C25E7E0F10001C3B2 /* Build configuration list for PBXNativeTarget "NotiCorrectionLib" */;
 			buildPhases = (
+				AD683C4269FE6D754EC2A463 /* [CP] Check Pods Manifest.lock */,
 				FEC4706425E7E0F00001C3B2 /* Sources */,
 				FEC4706525E7E0F00001C3B2 /* Frameworks */,
 				FEC4706625E7E0F00001C3B2 /* Resources */,
 				7A4F2CCA25F69F5D00A683F0 /* Embed App Extensions */,
+				CBFA2C8512EDA82E75BF5181 /* [CP] Embed Pods Frameworks */,
+				D1DBA69BE381AF1D07E98991 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,6 +280,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AD683C4269FE6D754EC2A463 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotiCorrectionLib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBFA2C8512EDA82E75BF5181 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1DBA69BE381AF1D07E98991 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotiCorrectionLib/Pods-NotiCorrectionLib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A4F2CBB25F69F5D00A683F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -313,7 +401,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib.NotiCorrectionLib.NotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,7 +420,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib.NotiCorrectionLib.NotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,17 +546,20 @@
 		};
 		FEC4707D25E7E0F10001C3B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0DE877FBAFBF9009473D205 /* Pods-NotiCorrectionLib.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotiCorrectionLib/NotiCorrectionLib.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P896AB2AMC;
 				INFOPLIST_FILE = NotiCorrectionLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib.NotiCorrectionLib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,17 +568,20 @@
 		};
 		FEC4707E25E7E0F10001C3B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F2281DC497A93C4E80426A4 /* Pods-NotiCorrectionLib.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotiCorrectionLib/NotiCorrectionLib.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P896AB2AMC;
 				INFOPLIST_FILE = NotiCorrectionLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib.NotiCorrectionLib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trust.NotiCorrectionLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
