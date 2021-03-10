@@ -10,7 +10,8 @@ target 'NotiCorrectionLib' do
   use_frameworks!
 
   # Pods for NotiCorrectionLib
-
+  
+  #delete local path
   pod 'TrustNotification', :path => '~/Desktop/trust/lat_trust_mobile_ios_trust-notification_library'
   pod 'TrustDeviceInfo'
   pod 'Firebase/Core'

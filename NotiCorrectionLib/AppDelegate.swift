@@ -12,18 +12,35 @@ import FirebaseMessaging
 import FirebaseCore
 import UserNotifications
 
+enum Credentials {
+    case prod
+    case test
+    
+    var clientID: String {
+        switch self {
+        case .prod: return "982862e9fa91bc66da8fd5731241ab9f3c9c0ca7df8e6fc9eeb47b97c160f39b"
+        case .test: return "1591e87a-3335-408e-aa12-668128be8dc8"
+        }
+    }
+    
+    var clientSecret: String {
+        switch self {
+        case .prod: return "5608eba6cc53cd94abca50ec3f87142006af9fdf5f2d278445f604218467f5d7"
+        case .test: return "57715d62-7607-43f3-9220-349132761afa"
+        }
+    }
+}
+
 @main
 class AppDelegate: UIResponder {
     
     let serviceName = "defaultServiceName"
     let accessGroup = "P896AB2AMC.trustID.appLib"
-    let clientID = "1591e87a-3335-408e-aa12-668128be8dc8"
-    let clientSecret = "57715d62-7607-43f3-9220-349132761afa"
     
-    let notifications = PushNotificationsInit()
+    let credentials: Credentials = .prod
+    
     let userDeviceInfo = UserDeviceInfo(dni: "")
     var window: UIWindow?
-
 }
 
 extension AppDelegate: UIApplicationDelegate {
@@ -77,14 +94,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // MARK: Background Notification
     public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.notifications.getNotification(response: response)
+            PushNotifications.shared.getNotification(response: response)
             completionHandler()
         }
     }
     
     // MARK: Foreground Notification
     public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        notifications.getNotificationForeground(notification: notification)
+        PushNotifications.shared.getNotificationForeground(notification: notification)
         
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         Messaging.messaging().appDidReceiveMessage(notification.request.content.userInfo)
@@ -121,14 +138,15 @@ extension AppDelegate {
     
     func initIdentify() {
         Identify.shared.trustDeviceInfoDelegate = self
-        Identify.shared.set(currentEnvironment: .test)
+        Identify.shared.set(currentEnvironment: .prod)
         Identify.shared.set(serviceName: serviceName, accessGroup: accessGroup)
-        Identify.shared.createClientCredentials(clientID: clientID, clientSecret: clientSecret)
+        Identify.shared.createClientCredentials(clientID: credentials.clientID, clientSecret: credentials.clientSecret)
         Identify.shared.enable()
     }
     
     private func initTrustNotifications() {
-        notifications.set(serviceName: serviceName, accessGroup: accessGroup)
-        notifications.createNotiClientCredentials(clientID: clientID, clientSecret: clientSecret)
+        PushNotifications.shared.set(currentEnvironment: .prod)
+        PushNotifications.shared.set(serviceName: serviceName, accessGroup: accessGroup)
+        PushNotifications.shared.createNotiClientCredentials(clientID: credentials.clientID, clientSecret: credentials.clientSecret)
     }
 }
